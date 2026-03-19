@@ -1,0 +1,9 @@
+#!/bin/bash
+
+mkdir -p ecommerce-microservices/{user-service,product-service,order-service,api-gateway,nginx,.github/workflows}
+mkdir -p ecommerce-microservices/user-service/{app,tests}
+mkdir -p ecommerce-microservices/product-service/{app,tests}
+mkdir -p ecommerce-microservices/order-service/{app,tests}
+mkdir -p ecommerce-microservices/api-gateway/app
+mkdir -p ecommerce-microservices/k8s/{user,product,order,gateway}
+echo "Structure created"
