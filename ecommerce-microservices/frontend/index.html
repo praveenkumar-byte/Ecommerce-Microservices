@@ -1,0 +1,26 @@
+<h1>Microservices App</h1>
+
+<button onclick="getUsers()">Get Users</button>
+<button onclick="getProducts()">Get Products</button>
+<button onclick="getOrders()">Get Orders</button>
+
+<pre id="output"></pre>
+
+<script>
+const API = "http://localhost:8000";
+
+async function getUsers() {
+  const res = await fetch(API + "/users");
+  document.getElementById("output").innerText = await res.text();
+}
+
+async function getProducts() {
+  const res = await fetch(API + "/products");
+  document.getElementById("output").innerText = await res.text();
+}
+
+async function getOrders() {
+  const res = await fetch(API + "/orders");
+  document.getElementById("output").innerText = await res.text();
+}
+</script>
