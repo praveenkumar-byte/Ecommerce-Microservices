@@ -8,7 +8,7 @@ FROM python:3.9-slim
 WORKDIR /app
 RUN useradd -m product-service
 COPY --from=builder /root/.local /root/.local
-COPY main.py .
+COPY . .
 ENV PATH=/root/.local/bin:$PATH
 USER product-service
 
