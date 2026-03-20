@@ -1,7 +1,7 @@
 # install dependencies stage
 FROM python:3.9 as builder
 WORKDIR /app
-COPY ../../requirements.txt .
+COPY requirements.txt .
 RUN pip install --no-cache-dir --user -r requirements.txt
 
 # runtime stage
